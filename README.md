@@ -17,7 +17,7 @@ Ruby (version 3.3.0 or later), Rails (version 7.1.3 or later), and PostgreSQL mu
 ### Setup Instructions
 
 #### 1. Clone the Project
-Run `dev clone https://github.com/Keaton11/comp3005-project.git`
+Run `dev clone https://github.com/Keaton11/comp3005-project.git`.
 
 #### 2. Install Dependencies
 Open your terminal and navigate to the `application` directory. Run the following command to install the necessary Ruby gems:
