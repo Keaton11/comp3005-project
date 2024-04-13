@@ -1,0 +1,45 @@
+<div id="completedExerciseRoutines">
+  <h2>Completed Exercise Routines</h2>
+  <%= render 'completed_exercise_routines/completed_routines', completed_routines: @completed_routines %> 
+</div>
+
+<br>
+
+<div id="fitnessAchievements">
+  <h2>Finess Achievements</h2>
+  <%= render 'fitness_goals/completed_goals', completed_goals: @completed_goals %>
+</div> 
+
+<br>
+
+<div id="healthStatistics">
+  <h2>Health Statistics</h2>
+    <% if !@member.height.present? && !@member.weight.present? && !@bmi.present? && !@bsa.present? %>
+      <div class="alert alert-info" role="alert">
+        Insufficient health data.
+      </div>
+    <% else %>
+      <ul class="list-group">
+        <% if @member.height.present? %>
+          <li class="list-group-item">
+            <strong>Height:</strong> <%= @member.height %> cm
+          </li>
+        <% end %>
+        <% if @member.weight.present? %>
+          <li class="list-group-item">
+            <strong>Weight:</strong> <%= @member.weight %> kg
+          </li>
+        <% end %>
+        <% if @bmi.present? %>
+          <li class="list-group-item">
+            <strong>BMI:</strong> <%= @bmi %>
+          </li>
+        <% end %>
+        <% if @bsa.present? %>
+          <li class="list-group-item">
+            <strong>BSA:</strong> <%= @bsa %> m<sup>2</sup>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+</div>

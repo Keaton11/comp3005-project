@@ -1,0 +1,42 @@
+<div id="<%= dom_id member %>">
+  <div class="card">
+    <h3 class="card-header">
+      Personal Information
+    </h3>
+    <div class="card-body">
+        <p>
+          <strong>First name:</strong>
+          <%= member.first_name %>
+        </p>
+
+        <p>
+          <strong>Last name:</strong>
+          <%= member.last_name %>
+        </p>
+
+        <p>
+          <strong>Date of birth:</strong>
+          <%= member.date_of_birth %>
+        </p>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="card">
+    <h3 class="card-header">
+      Health Metrics
+    </h3>
+    <div class="card-body">
+        <p>
+          <strong>Height:</strong>
+          <%= member.height %>
+        </p>
+
+        <p>
+          <strong>Weight:</strong>
+          <%= member.weight %>
+        </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+json.partial! "fitness_class_exercise_routines/fitness_class_exercise_routine", fitness_class_exercise_routine: @fitness_class_exercise_routine

@@ -1,0 +1,32 @@
+<%= provide(:title, 'Manage Bookings') %>
+<h2>Manage Bookings</h2>
+
+<div class="container mt-4">
+  <% @fitness_classes.each do |fitness_class_detail| %>
+    <div class="card mb-3">
+      <h5 class="card-header">
+        Class ID: <%= fitness_class_detail[:fitness_class].id %> - Trainer ID: <%= fitness_class_detail[:fitness_class].trainer_id %>
+      </h5>
+      <div class="card-body">
+        <p class="card-text">
+          <strong>Start Time:</strong> <%= fitness_class_detail[:fitness_class].start_time %><br>
+          <strong>End Time:</strong> <%= fitness_class_detail[:fitness_class].end_time %><br>
+          <strong>Members Count:</strong> <%= fitness_class_detail[:member_count] %><br>
+          <strong>Room:</strong> <%= fitness_class_detail[:fitness_class].room.id %>
+        </p>
+        <hr>
+        <strong>Update Room:</strong>
+        <%= form_with url: update_class_room_rooms_path, method: :post, local: true do |form| %>
+          <%= form.hidden_field :class_id, value: fitness_class_detail[:fitness_class].id %>
+            <select name="room_id" class="form-select">
+              <% @rooms.each do |room| %>
+              <option value="<%= room.id %>" <%= 'selected' if room.id == fitness_class_detail[:fitness_class].room.id %>><%= room.id %></option>
+              <% end %>
+            </select>
+          <hr>
+          <%= form.submit "Update Room", class: "btn btn-primary mt-2" %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

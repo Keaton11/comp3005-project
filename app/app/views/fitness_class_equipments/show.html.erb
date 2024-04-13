@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @fitness_class_equipment %>
+
+<div>
+  <%= link_to "Edit this fitness class equipment", edit_fitness_class_equipment_path(@fitness_class_equipment) %> |
+  <%= link_to "Back to fitness class equipment", fitness_class_equipments_path %>
+
+  <%= button_to "Destroy this fitness class equipment", @fitness_class_equipment, method: :delete %>
+</div>

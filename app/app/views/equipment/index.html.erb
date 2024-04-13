@@ -1,0 +1,12 @@
+<h2>Equipment Maintenance</h2>
+
+<br>
+
+<div id="equipment">
+  <% @equipment.each do |equipment| %>
+    <%= render equipment %>
+    <br>
+  <% end %>
+</div>
+
+<%= link_to "New equipment", new_equipment_path, class: "btn btn-primary" %>

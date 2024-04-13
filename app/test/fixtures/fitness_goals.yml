@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  member: one
+  exercise: one
+  repetitions: 1
+  weight: 1
+  time: 1
+  distance: 1
+
+two:
+  member: two
+  exercise: two
+  repetitions: 1
+  weight: 1
+  time: 1
+  distance: 1

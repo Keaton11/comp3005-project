@@ -1,0 +1,68 @@
+<div class="card">
+  <h2 class="card-header">
+    Edit Profile
+  </h2>
+  <div class="card-body">
+
+    <%= form_with(model: member) do |form| %>
+      <% if member.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+          <ul>
+            <% member.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="card">
+        <h4 class="card-header">Personal Informaton</h4>
+        <div class="card-body">
+          <div class="mb-3">
+            <%= form.label :first_name, style: "display: block", class:"form-label" %>
+            <%= form.text_field :first_name, class:"form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%= form.label :last_name, style: "display: block", class:"form-label" %>
+            <%= form.text_field :last_name, class:"form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%= form.label :date_of_birth, style: "display: block", class:"form-label" %>
+            <%= form.date_field :date_of_birth, class:"form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="card">
+        <h4 class="card-header">Health Metrics</h4>
+        <div class="card-body">
+          <div class="mb-3">
+            <%= form.label :height, style: "display: block", class:"form-label" %>
+            <%= form.text_field :height, class:"form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%= form.label :weight, style: "display: block", class:"form-label" %>
+            <%= form.text_field :weight, class:"form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="mb-3">
+        <%= form.submit "Save Changes", class:"btn btn-primary" %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+
+

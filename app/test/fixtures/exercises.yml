@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  has_weight: false
+  has_time: false
+  has_distance: false
+
+two:
+  name: MyString
+  has_weight: false
+  has_time: false
+  has_distance: false

@@ -1,0 +1,39 @@
+<div id="<%= dom_id fitness_goal %>">
+    <div class="card">
+    <h3 class="card-header">
+      <%= fitness_goal.exercise.name %>
+    </h3>
+    <div class="card-body">
+      <p>
+        <strong>Repetitions:</strong>
+        <%= fitness_goal.repetitions %>
+      </p>
+
+      <% if fitness_goal.weight %>
+        <p>
+          <strong>Weight:</strong>
+          <%= fitness_goal.weight %>
+        </p>
+      <% end %>
+
+      <% if fitness_goal.time %>
+        <p>
+          <strong>Time:</strong>
+          <%= fitness_goal.time %>
+        </p>
+      <% end %>
+
+      <% if fitness_goal.distance %>
+        <p>
+          <strong>Distance:</strong>
+          <%= fitness_goal.distance %>
+        </p>
+      <% end %>
+
+      <div class="d-flex align-items-center">
+        <%= link_to "Edit", edit_fitness_goal_path(fitness_goal), class: "btn btn-primary mr-2", style: "margin-right: 10px;" %>
+        <%= button_to "Delete", fitness_goal, method: :delete, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

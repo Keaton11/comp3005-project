@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Completed exercise routines</h1>
+
+<div id="completed_exercise_routines">
+  <% @completed_exercise_routines.each do |completed_exercise_routine| %>
+    <%= render completed_exercise_routine %>
+    <p>
+      <%= link_to "Show this completed exercise routine", completed_exercise_routine %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New completed exercise routine", new_completed_exercise_routine_path %>

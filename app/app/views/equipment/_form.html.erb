@@ -1,0 +1,32 @@
+<%= form_with(model: equipment) do |form| %>
+  <% if equipment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(equipment.errors.count, "error") %> prohibited this equipment from being saved:</h2>
+
+      <ul>
+        <% equipment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :name, style: "display: block", class:"form-label" %>
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :last_used, style: "display: block", class:"form-label" %>
+    <%= form.date_field :last_used, class:"form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :last_maintained, style: "display: block", class:"form-label" %>
+    <%= form.date_field :last_maintained, class:"form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit "Submit", class:"btn btn-primary" %>
+  </div>
+<% end %>

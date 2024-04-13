@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    <h2>New Fitness Goal</h2>
+  </div>
+  <div class="card-body">
+    <%= render "form", fitness_goal: @fitness_goal %>
+  </div>
+</div>
+
+<br>
+
+<div>
+  <%= link_to "Back to fitness goals", fitness_goals_path, class: "btn btn-primary" %>
+</div>

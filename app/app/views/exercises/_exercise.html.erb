@@ -1,0 +1,28 @@
+<div id="<%= dom_id exercise %>">
+  <div class="card">
+    <h3 class="card-header">
+      <%= exercise.name %>
+    </h3>
+    <div class="card-body">
+      <p>
+        <strong>Has weight:</strong>
+        <%= exercise.has_weight %>
+      </p>
+
+      <p>
+        <strong>Has time:</strong>
+        <%= exercise.has_time %>
+      </p>
+
+      <p>
+        <strong>Has distance:</strong>
+        <%= exercise.has_distance %>
+      </p>
+
+      <div class="d-flex align-items-center">
+        <%= link_to "Edit", edit_exercise_path(exercise), class: "btn btn-primary mr-2", style: "margin-right: 10px;" %>
+        <%= button_to "Delete", exercise, method: :delete, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

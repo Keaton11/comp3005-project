@@ -1,0 +1,12 @@
+<h2>Fitness Goals</h2>
+
+<br>
+
+<div id="fitness_goals">
+  <% @fitness_goals.each do |fitness_goal| %>
+    <%= render fitness_goal %>
+    <br>
+  <% end %>
+</div>
+
+<%= link_to "New fitness goal", new_fitness_goal_path, class: "btn btn-primary" %>

@@ -1,0 +1,27 @@
+<%= form_with(model: fitness_class_equipment) do |form| %>
+  <% if fitness_class_equipment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fitness_class_equipment.errors.count, "error") %> prohibited this fitness_class_equipment from being saved:</h2>
+
+      <ul>
+        <% fitness_class_equipment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :fitness_class_id, style: "display: block" %>
+    <%= form.text_field :fitness_class_id %>
+  </div>
+
+  <div>
+    <%= form.label :equipment_id, style: "display: block" %>
+    <%= form.text_field :equipment_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

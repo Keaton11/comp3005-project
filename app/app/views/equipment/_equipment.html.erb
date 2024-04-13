@@ -1,0 +1,23 @@
+<div id="<%= dom_id equipment %>">
+  <div class="card">
+    <h3 class="card-header">
+      <%= equipment.name %>
+    </h3>
+    <div class="card-body">
+      <p>
+        <strong>Last used:</strong>
+        <%= equipment.last_used %>
+      </p>
+
+      <p>
+        <strong>Last maintained:</strong>
+        <%= equipment.last_maintained %>
+      </p>
+
+      <div class="d-flex align-items-center">
+        <%= link_to "Edit", edit_equipment_path(equipment), class: "btn btn-primary mr-2", style: "margin-right: 10px;" %>
+        <%= button_to "Delete", equipment, method: :delete, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

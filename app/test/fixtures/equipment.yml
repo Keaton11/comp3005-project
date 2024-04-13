@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  last_used: 2024-04-12
+  last_maintained: 2024-04-12
+
+two:
+  name: MyString
+  last_used: 2024-04-12
+  last_maintained: 2024-04-12

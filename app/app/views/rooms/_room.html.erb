@@ -1,0 +1,18 @@
+<div id="<%= dom_id room %>">
+  <div class="card">
+    <h3 class="card-header">
+      Room ID: <%= room.id %>
+    </h3>
+    <div class="card-body">
+      <p>
+        <strong>Maximum occupancy:</strong>
+        <%= room.maximum_occupancy %>
+      </p>
+
+      <div class="d-flex align-items-center">
+        <%= link_to "Edit", edit_room_path(room), class: "btn btn-primary mr-2", style: "margin-right: 10px;" %>
+        <%= button_to "Delete", room, method: :delete, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

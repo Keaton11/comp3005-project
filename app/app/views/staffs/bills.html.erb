@@ -1,0 +1,36 @@
+<h2>Bills</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Member ID</th>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.date %></td>
+        <td><%= bill.member.id %></td>
+        <td><%= bill.name %></td>
+        <td><%= bill.cost %></td>
+        <td><%= bill.paid ? "Paid" : "Unpaid" %></td>
+        <td>
+          <% if bill.paid %>
+            <%= form_with model: [ bill ], url: staff_remove_payment_bill_path(id: bill.id), method: :patch, local: true do |form| %>
+              <%= form.submit "Mark as Unpaid", class: "btn btn-success btn-sm" %>
+            <% end %>
+          <% else %>
+            <%= form_with model: [ bill ], url: staff_pay_bill_path(id: bill.id), method: :patch, local: true do |form| %>
+              <%= form.submit "Mark as Paid", class: "btn btn-success btn-sm" %>
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

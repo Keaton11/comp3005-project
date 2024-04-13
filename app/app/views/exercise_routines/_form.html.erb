@@ -1,0 +1,57 @@
+<div data-controller="exercise-form">
+  <%= form_with(model: exercise_routine) do |form| %>
+    <% if exercise_routine.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(exercise_routine.errors.count, "error") %> prohibited this exercise_routine from being saved:</h2>
+        <ul>
+          <% exercise_routine.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-3">
+      <%= form.label :exercise_id, style: "display: block", class:"form-label" %>
+      <%= form.select :exercise_id,
+        Exercise.all.collect { |exercise|
+          [exercise.name, exercise.id, {
+            'data-has-weight': exercise.has_weight,
+            'data-has-time': exercise.has_time,
+            'data-has-distance': exercise.has_distance
+          }]
+        }, {}, {
+          id: "exercise_select",
+          class: "form-select",
+          data: {
+            "exercise-form-target": "exercise",
+            action: "change->exercise-form#updateFields"
+          }
+        } %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :repetitions, style: "display: block", class:"form-label" %>
+      <%= form.number_field :repetitions, class:"form-control" %>
+    </div>
+
+    <div class="mb-3" id="weight_wrapper" style="display: none" data-exercise-form-target="weightWrapper">
+      <%= form.label :weight, style: "display: block", class:"form-label" %>
+      <%= form.number_field :weight, class:"form-control" %>
+    </div>
+
+    <div class="mb-3" id="time_wrapper" style="display: none" data-exercise-form-target="timeWrapper">
+      <%= form.label :time, style: "display: block", class:"form-label" %>
+      <%= form.number_field :time, class:"form-control" %>
+    </div>
+
+    <div class="mb-3" id="distance_wrapper" style="display: none" data-exercise-form-target="distanceWrapper">
+      <%= form.label :distance, style: "display: block", class:"form-label" %>
+      <%= form.number_field :distance, class:"form-control" %>
+    </div>
+
+    <div>
+      <%= form.submit "Submit", class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

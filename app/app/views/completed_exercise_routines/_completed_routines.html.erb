@@ -1,0 +1,31 @@
+<% if completed_routines.any? %>
+  <div class="list-group mt-3">
+    <% completed_routines.each do |routine| %>
+      <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1"><%= routine.exercise_name %></h5>
+          <small><%= routine.date %></small>
+        </div>
+        <p class="mb-1">
+          <strong>Details:</strong>
+        </p>
+        <ul>
+          <li>Repetitions: <%= routine.repetitions %></li>
+          <% if routine.weight %>
+            <li>Weight: <%= routine.weight %> kg</li>
+          <% end %>
+          <% if routine.time %>
+            <li>Time: <%= routine.time %> minutes</li>
+          <% end %>
+          <% if routine.distance %>
+            <li>Distance: <%= routine.distance %> meters</li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="alert alert-info" role="alert">
+    No routines found.
+  </div>
+<% end %>

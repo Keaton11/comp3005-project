@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    <h2>New Exercise Routine</h2>
+  </div>
+  <div class="card-body">
+    <%= render "form", exercise_routine: @exercise_routine %>
+  </div>
+</div>
+
+<br>
+
+<div>
+  <%= link_to "Back to exercise routines", exercise_routines_path, class: "btn btn-primary" %>
+</div>

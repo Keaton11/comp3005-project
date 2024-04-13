@@ -1,0 +1,12 @@
+<h2>Rooms</h2>
+
+<br>
+
+<div id="rooms">
+  <% @rooms.each do |room| %>
+    <%= render room %>
+    <br>
+  <% end %>
+</div>
+
+<%= link_to "New room", new_room_path, class: "btn btn-primary" %>

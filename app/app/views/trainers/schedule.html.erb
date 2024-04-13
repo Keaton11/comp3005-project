@@ -1,0 +1,66 @@
+<input type="hidden" id="user-id" value="<%= current_user.roleable_id %>">
+<div id="calendar" data-controller="calendar"></div>
+
+<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalLabel">Confirm Training Session</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <h5>Selected Time Slot</h5>
+        </div>
+        <form id="timeSelectionForm">
+          <div class="mb-3">
+            <label for="startTime" class="form-label">Start Time</label>
+            <input type="datetime-local" class="form-control" id="startTime" disabled>
+          </div>
+          <div class="mb-3">
+            <label for="endTime" class="form-label">End Time</label>
+            <input type="datetime-local" class="form-control" id="endTime" disabled>
+          </div>
+        </form>
+
+        <hr>
+
+        <div class="mb-3">
+          <h5>Select Exercise Routines</h5>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Exercise Routines</label>
+          <div id="exerciseRoutineChecklist">
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="mb-3">
+          <h5>Select Equipment</h5>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Equipment</label>
+          <div id="equipmentChecklist">
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="mb-3">
+          <h5>Room</h5>
+        </div>
+        <div class="mb-3">
+          <label for="roomSelect" class="form-label">Select Room</label>
+          <select class="form-control" id="roomSelect">
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="confirmButton">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Fitness classes</h1>
+
+<div id="fitness_classes">
+  <% @fitness_classes.each do |fitness_class| %>
+    <%= render fitness_class %>
+    <p>
+      <%= link_to "Show this fitness class", fitness_class %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New fitness class", new_fitness_class_path %>

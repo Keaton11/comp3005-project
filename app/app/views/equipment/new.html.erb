@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    <h2>New Equipment</h2>
+  </div>
+  <div class="card-body">
+    <%= render "form", equipment: @equipment %>
+  </div>
+</div>
+
+<br>
+
+<div>
+  <%= link_to "Back to equipment", equipment_index_path, class: "btn btn-primary" %>
+</div>

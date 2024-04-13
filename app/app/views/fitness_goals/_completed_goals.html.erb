@@ -1,0 +1,31 @@
+<% if completed_goals.any? %>
+  <div class="list-group mt-3">
+    <% completed_goals.each do |goal| %>
+      <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1"><%= goal['exercise_name'] %></h5>
+          <small>Total Repetitions: <%= goal['total_repetitions'] %></small>
+        </div>
+        <p class="mb-1">
+          <strong>Details:</strong>
+        </p>
+        <ul>
+          <li>Repetitions: <%= goal['repetitions'] %></li>
+          <% if goal['weight'] %>
+            <li>Weight: <%= goal['weight'] %> kg</li>
+          <% end %>
+          <% if goal['time'] %>
+            <li>Time: <%= goal['time'] %> minutes</li>
+          <% end %>
+          <% if goal['distance'] %>
+            <li>Distance: <%= goal['distance'] %> meters</li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="alert alert-info" role="alert">
+    No completed goals found.
+  </div>
+<% end %>

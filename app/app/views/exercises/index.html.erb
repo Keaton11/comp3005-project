@@ -1,0 +1,12 @@
+<h2>Exercises</h2>
+
+<br>
+
+<div id="exercises">
+  <% @exercises.each do |exercise| %>
+    <%= render exercise %>
+    <br>
+  <% end %>
+</div>
+
+<%= link_to "New exercise", new_exercise_path, class: "btn btn-primary" %>

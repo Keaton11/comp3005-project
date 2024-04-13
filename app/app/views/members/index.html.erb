@@ -1,0 +1,25 @@
+<h2>Members</h2>
+
+<br>
+
+<%= form_with(url: members_path, method: :get, local: true, class: "d-flex") do |form| %>
+  <%= form.text_field :search, placeholder: "Search by name", aria: { label: 'Search by name' }, class: "form-control me-2" %>
+  <%= form.submit "Search", class: "btn btn-outline-success" %>
+<% end %>
+
+<div id="members">
+  <% @members.each do |member| %>
+    <br>
+    <div class="card">
+      <h3 class="card-header">
+        <%= member.first_name %> <%= member.last_name %>
+      </h3>
+      <div class="card-body">
+        <p><strong>Email:</strong> <%= member.user.email %></p>
+        <p><strong>Date of birth:</strong> <%= member.date_of_birth %></p>
+        <p><strong>Height:</strong> <%= member.height %></p>
+        <p><strong>Weight:</strong> <%= member.weight %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

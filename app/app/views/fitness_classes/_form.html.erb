@@ -1,0 +1,42 @@
+<%= form_with(model: fitness_class) do |form| %>
+  <% if fitness_class.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fitness_class.errors.count, "error") %> prohibited this fitness_class from being saved:</h2>
+
+      <ul>
+        <% fitness_class.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :room_id, style: "display: block" %>
+    <%= form.text_field :room_id %>
+  </div>
+
+  <div>
+    <%= form.label :trainer_id, style: "display: block" %>
+    <%= form.text_field :trainer_id %>
+  </div>
+
+  <div>
+    <%= form.label :group_session, style: "display: block" %>
+    <%= form.check_box :group_session %>
+  </div>
+
+  <div>
+    <%= form.label :start_time, style: "display: block" %>
+    <%= form.datetime_field :start_time %>
+  </div>
+
+  <div>
+    <%= form.label :end_time, style: "display: block" %>
+    <%= form.datetime_field :end_time %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
