@@ -284,7 +284,7 @@ export default class extends Controller {
                     member_id: document.getElementById('user-id').value,
                     name: `Fitness Class (Group): ${info.event.id}`,
                     date: info.event.start.toISOString().split('T')[0],
-                    cost: 25,
+                    cost: 25 + response.data.equipment.length * 5 + response.data.exercise_routines.length * 10,
                     paid: false
                   }
                 }).catch(error => {
@@ -403,7 +403,7 @@ export default class extends Controller {
           member_id: member_id,
           name: `Fitness Class (Personal): ${fitness_class_id}`,
           date: start_time.toISOString().split('T')[0],
-          cost: 50,
+          cost: 50 + equipment.length * 5 + exercise_routines.length * 10,
           paid: false
         }
       }).catch(error => {
