@@ -13,6 +13,11 @@ CREATE TABLE trainers (
     id SERIAL PRIMARY KEY
 );
 
+-- Create staffs table
+CREATE TABLE staffs (
+    id SERIAL PRIMARY KEY
+);
+
 -- Create availabilities table
 CREATE TABLE availabilities (
     id SERIAL PRIMARY KEY,
@@ -53,6 +58,12 @@ CREATE TABLE exercise_routines (
     FOREIGN KEY (exercise_id) REFERENCES exercises(id)
 );
 
+-- Create rooms table
+CREATE TABLE rooms (
+    id SERIAL PRIMARY KEY,
+    maximum_occupancy INT
+);
+
 -- Create fitness_classes table
 CREATE TABLE fitness_classes (
     id SERIAL PRIMARY KEY,
@@ -63,12 +74,6 @@ CREATE TABLE fitness_classes (
     end_time TIMESTAMP,
     FOREIGN KEY (room_id) REFERENCES rooms(id),
     FOREIGN KEY (trainer_id) REFERENCES trainers(id)
-);
-
--- Create rooms table
-CREATE TABLE rooms (
-    id SERIAL PRIMARY KEY,
-    maximum_occupancy INT
 );
 
 -- Create equipment table

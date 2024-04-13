@@ -23,8 +23,8 @@ Run `dev clone https://github.com/Keaton11/comp3005-project.git`.
 Open your terminal and navigate to the `application` directory. Run the following command to install the necessary Ruby gems:
 
 ```bash
- bundle install
- ```
+bundle install
+```
 
 #### 3. Configure Database
 Configure database settings under `application/config/database.yml` to point to your PostgreSQL instance.
@@ -32,21 +32,25 @@ Configure database settings under `application/config/database.yml` to point to 
 #### 4. Create and Migrate the Database**:
 From the `application` directory, create the database and run migrations by running the following commands:
 
- ```bash
- rails db:create
- rails db:migrate
- ```
+```bash
+rails db:create
+rails db:migrate
+```
+
+*Note:* The database can be cleaned using the command `rake db:clean`, or cleaned and re-seeded using the command `rails db:seed:replant`.
 
 #### 7 Run the Server
 Start the Rails server by running:
 
- ```bash
- rails server
- ```
+```bash
+rails server
+```
 
 This will start the application on `localhost:3000` by default. It can then be accessed by going to `http://localhost:3000` in your web browser.
 
 ## Steps to Execute DDL and DML Files 
+
+*Note:* These steps demonstrate how the database could be setup manually using pgAdmin 4. However, these steps are not necessary given that Ruby on Rails handles database setup and seeding. The professor confirmed that it is sufficient to provide the SQL files to demonstrate knowledge but not actually use them as part of the set up process.
 
 ### 1. Open pgAdmin 4
 - Begin by opening pgAdmin 4.
