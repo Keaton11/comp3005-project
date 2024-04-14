@@ -13,6 +13,7 @@ export default class extends Controller {
       eventResizableFromStart: true,
       eventDurationEditable: true,
       editable: true,
+      allDaySlot: false,
       eventClick: this.handleEventClick.bind(this),
       eventDrop: this.handleEventUpdate.bind(this),
       eventResizeStop: this.handleEventUpdate.bind(this),

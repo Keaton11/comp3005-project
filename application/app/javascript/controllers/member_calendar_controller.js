@@ -9,6 +9,7 @@ export default class extends Controller {
       initialView: 'timeGridWeek',
       selectable: false,
       selectMirror: true,
+      allDaySlot: false,
       eventClick: this.handleEventClick.bind(this),
       unselectAuto: true,
     });

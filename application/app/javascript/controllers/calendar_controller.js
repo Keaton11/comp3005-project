@@ -10,6 +10,7 @@ export default class extends Controller {
       selectable: true,
       selectMirror: true,
       selectOverlap: false,
+      allDaySlot: false,
       select: this.handleSelect.bind(this),
       eventClick: this.handleEventClick.bind(this),
       unselectAuto: true,
