@@ -5,7 +5,85 @@
 
 ## Submission Structure
 
-ADD TREE
+```
+└── comp3005-project
+    ├── SQL
+    ├── application
+    │   ├── app
+    │   │   ├── assets
+    │   │   │   ├── config
+    │   │   │   ├── images
+    │   │   │   └── stylesheets
+    │   │   ├── channels
+    │   │   │   └── application_cable
+    │   │   ├── controllers
+    │   │   │   ├── concerns
+    │   │   │   └── users
+    │   │   ├── helpers
+    │   │   │   └── users
+    │   │   ├── javascript
+    │   │   │   └── controllers
+    │   │   ├── jobs
+    │   │   ├── mailers
+    │   │   ├── models
+    │   │   │   └── concerns
+    │   │   └── views
+    │   │       ├── availabilities
+    │   │       ├── bills
+    │   │       ├── completed_exercise_routines
+    │   │       ├── devise
+    │   │       ├── equipment
+    │   │       ├── exercise_routines
+    │   │       ├── exercises
+    │   │       ├── fitness_class_equipments
+    │   │       ├── fitness_class_exercise_routines
+    │   │       ├── fitness_class_members
+    │   │       ├── fitness_classes
+    │   │       ├── fitness_goals
+    │   │       ├── home
+    │   │       ├── layouts
+    │   │       ├── members
+    │   │       ├── rooms
+    │   │       ├── staffs
+    │   │       ├── trainers
+    │   │       └── users
+    │   ├── bin
+    │   ├── config
+    │   │   ├── environments
+    │   │   ├── initializers
+    │   │   └── locales
+    │   ├── db
+    │   │   └── migrate
+    │   ├── lib
+    │   │   ├── assets
+    │   │   └── tasks
+    │   ├── log
+    │   ├── node_modules
+    │   ├── public
+    │   ├── storage
+    │   ├── test
+    │   │   ├── channels
+    │   │   │   └── application_cable
+    │   │   ├── controllers
+    │   │   │   └── users
+    │   │   ├── fixtures
+    │   │   │   └── files
+    │   │   ├── helpers
+    │   │   ├── integration
+    │   │   ├── mailers
+    │   │   ├── models
+    │   │   └── system
+    │   ├── tmp
+    │   │   ├── cache
+    │   │   │   ├── assets
+    │   │   │   └── bootsnap
+    │   │   ├── pids
+    │   │   ├── sockets
+    │   │   └── storage
+    │   └── vendor
+    │       └── javascript
+    └── diagrams
+```
 
 ## Steps to Compile and Run Application
 
