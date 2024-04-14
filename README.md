@@ -1,7 +1,7 @@
 # COMP 3005: Final Project
 ### Keaton Lee (101229189)
 
-**Demonstration Video:** ADD LINK
+**Demonstration Video:** https://youtu.be/rcHTqEKPCi0
 
 ## Submission Structure
 
