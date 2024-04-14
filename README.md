@@ -117,7 +117,7 @@ rails db:migrate
 
 *Note:* The database can be cleaned using the command `rake db:clean`, or cleaned and re-seeded using the command `rails db:seed:replant`.
 
-#### 7 Run the Server
+#### 5. Run the Server
 Start the Rails server by running:
 
 ```bash
@@ -130,29 +130,29 @@ This will start the application on `localhost:3000` by default. It can then be a
 
 *Note:* These steps demonstrate how the database could be setup manually using pgAdmin 4. However, these steps are not necessary given that Ruby on Rails handles database setup and seeding. The professor confirmed that it is sufficient to provide the SQL files to demonstrate knowledge but not actually use them as part of the set up process.
 
-### 1. Open pgAdmin 4
+#### 1. Open pgAdmin 4
 - Begin by opening pgAdmin 4.
 - This application will likely be opened from your applications menu or desktop shortcut.
 - Once opened, the pgAdmin 4 dashboard will be visible.
 
-### 2. Connect to a PostgreSQL Server
+#### 2. Connect to a PostgreSQL Server
 - In the Browser pane on the left side, click on the "Servers" dropdown menu.
 - Select the "PostgreSQL" server from this dropdown.
 - Enter your password as prompted then click "OK" to continue.
 
-### 3. Create a New Database
+#### 3. Create a New Database
 - Right click on "Databases" under the "PostgreSQL" server.
 - Select "Create" > "Database...".
 - Enter a name for the database. For the name, use "COMP3005".
     - Note that another name can be used, but the following steps will assume the database is named "COMP3005".
 - Click "Save" to create the database.
 
-### 4. Open Query Tool
+#### 4. Open Query Tool
 - After creating the database, navigate to it by expanding the "Databases" tree.
 - Navigate to the "COMP3005" database and click on it to select it. 
 - Right-click on the "COMP3005" database and select "Query Tool" to open the SQL editor.
 
-### 5. Copy DDL Commands
+#### 5. Copy DDL Commands
 - Click the "Open File" button and select the file "DDL.sql" under the "SQL" directory.
 - Alternatively, copy and paste the SQL commands located in "SQL/DDL.sql".
     - Under the "SQL" directory, open the file "DDL.sql".
@@ -160,11 +160,11 @@ This will start the application on `localhost:3000` by default. It can then be a
     - In the Query Tool, paste the copied SQL commands.
 - These SQL commands will create the student table and insert the provided data.
 
-### 6. Execute the DDL Query
+#### 6. Execute the DDL Query
 - After pasting the SQL code, the query can be run by clicking the "Execute/Refresh" button.
 - This will run the entered SQL commands and populate the database accordingly.
 
-### 7. Copy DML Commands
+#### 7. Copy DML Commands
 - Click the "Open File" button and select the file "DML.sql" under the "SQL" directory.
 - Alternatively, copy and paste the SQL commands located in "SQL/DML.sql".
     - Under the "SQL" directory, open the file "DML.sql".
@@ -172,6 +172,6 @@ This will start the application on `localhost:3000` by default. It can then be a
     - In the Query Tool, paste the copied SQL commands.
 - These SQL commands will create the student table and insert the provided data.
 
-### 8. Execute the DML Query
+#### 8. Execute the DML Query
 - After pasting the SQL code, the query can be run by clicking the "Execute/Refresh" button.
 - This will run the entered SQL commands and populate the database accordingly.
